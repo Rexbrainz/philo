@@ -7,10 +7,12 @@ NAME = philo
 
 # Compiler and flags
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=thread
 
 # Source files
-SRC = main.c ft_atol.c ft_atoi.c
+SRC = main.c	ft_atol.c	ft_atoi.c\
+	  make_table.c	 create_philos.c	simulation_utils.c\
+	  main_thread.c
 # Object files
 OBJ = $(SRC:.c=.o)
 
